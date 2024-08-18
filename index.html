@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Piddi verification</title>
+
+    <!--CSS page-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="title common"><h3>Piddi verification</h3></div>
+
+        <div class="dob common">
+            <label for="start">Piddi's DOB: </label>
+            <input type="date" id="start" name="piddi-dob" value="2008-05-07" min="1986-01-01" max="2020-01-01">
+        </div> 
+
+        <div class="password common"> 
+            <label for="pass">Piddi's village name: </label>
+            <input type="password" id="pass" name="password" minlength="4" required >
+        </div> 
+
+        <div class="submit common">
+            <button type="submit" class="login" onclick="func()">Proceed</button>
+        </div>
+      </div>
+    </div>
+    <script>
+        function func()
+        {
+            var date = document.getElementById("start").value;
+            var pass = document.getElementById("pass").value;
+            if(date == '2004-06-10' && pass == 'hariharpur')
+            {
+                alert("Seems like U re Khushi, if yes..proceed!")
+                window.location.assign("use-laptop.html")
+            }
+            else
+            {
+                alert("wrong entry! try again..")
+            }
+        }
+    </script>
+  </body>
+</html>
